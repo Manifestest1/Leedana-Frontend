@@ -1,0 +1,54 @@
+.loginWrapper {
+    .loginInner {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .loginLeft {
+            background: var(--primary-gradient);
+            width: 58%;
+            .loginLeftInner {
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-image: url('../../assets/images/login-bg-vectore.png');
+                .logoLeftContentWrapper {
+                    max-width: 480px;
+                    margin: auto;
+                    text-align: center;
+                    padding: 50px 15px;
+                    .logo {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+        .loginRight {
+            width: 42%;
+            padding: 30px 20;
+            .loginRightInner {
+                max-width: 350px;
+                margin: auto;
+                .loginUserButton {
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                    max-width: 150px;
+                    min-height: 130px;
+                    padding: 10px;
+                    color: var(--light-black-color);
+                    border-radius: 1rem;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    background-color: var(--white-light-color );
+                    [class*="MuiButton-icon"] {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

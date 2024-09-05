@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+@import "@fontsource/manrope";
+/* @import "@fontsource/manrope/400.css";
+@import "@fontsource/manrope/400-italic.css"; */
+
+:root {
+  --primary-color:#558B2F;
+  --primary-gradient: radial-gradient(circle, rgba(85,139,47,1) 0%, rgba(23,37,13,1) 100%);
+  --white-color: #ffffff;
+  --light-black-color: #57644B;
+  --white-light-color: #F8F9F8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Manrope";
+  background-color: var(--white-color);
+}
+body h1.title {
+  font-size: 46px;
+  line-height: 1.5;
+  font-weight: 700;
+  font-family: "Manrope";
+}
+body h2.title {
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: 700;
+  font-family: "Manrope";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body h3.title {
+  line-height: 1.5;
+  font-family: "Manrope";
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body h4.title {
+  line-height: 1.5;
+  font-weight: 700;
+  font-family: "Manrope";
 }
-
-.App-link {
-  color: #61dafb;
+body h5.title {
+  line-height: 1.5;
+  font-family: "Manrope";
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body h6.title {
+  line-height: 1.5;
+  font-family: "Manrope";
+}
+.text-white {
+  color: var(--white-color);
+}
+.theme-black-color {
+  color: var(--light-black-color);
 }
