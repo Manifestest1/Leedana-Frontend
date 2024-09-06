@@ -1,6 +1,5 @@
 @import "@fontsource/manrope";
-/* @import "@fontsource/manrope/400.css";
-@import "@fontsource/manrope/400-italic.css"; */
+
 
 :root {
   --primary-color:#558B2F;
@@ -8,11 +7,21 @@
   --white-color: #ffffff;
   --light-black-color: #57644B;
   --white-light-color: #F8F9F8;
+  --grey-color: #75846B;
+  --border-color: rgba(85, 139, 47, 0.5);
 }
 
 body {
   font-family: "Manrope";
   background-color: var(--white-color);
+  line-height: 1.5;
+}
+body a.MuiTypography-root {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+body .text-grey {
+  color: var(--grey-color);
 }
 body h1.title {
   font-size: 46px;
@@ -49,4 +58,33 @@ body h6.title {
 }
 .theme-black-color {
   color: var(--light-black-color);
+}
+button.btn-text {
+  background-color: transparent;
+  color: var(--light-black-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+button.btn-text .MuiButton-startIcon svg {
+  width: 20px;
+  height: auto;
+  max-height: 20px;
+}
+button.btn-text:hover,
+button.btn-text.text-primary {
+  color: var(--primary-color);
+}
+.MuiFormControlLabel-root .MuiCheckbox-root {
+  padding-right: 5px;
+}
+.MuiFormControlLabel-root .MuiCheckbox-root {
+  color: var(--primary-color);
+}
+.MuiFormControlLabel-root .MuiCheckbox-root.Mui-checked {
+  color: var(--primary-color);
+}
+.MuiFormControlLabel-root .MuiCheckbox-root ~ .MuiTypography-root {
+  color: var(--grey-color);
 }

@@ -2,15 +2,14 @@ import { Box, Button, Checkbox, FormControlLabel, FormGroup, Link, Stack, Typogr
 import React from "react";
 import styles from "./Login.module.scss";
 import Logo from "../../assets/images/logo.svg";
-import {ReactComponent as BackArrow} from "../../assets/images/icon/back-arrow.svg";
-import {ReactComponent as Admin} from "../../assets/images/icon/user-setting-icon.svg";
+import {ReactComponent as User} from "../../assets/images/icon/user-icon.svg";
 import {ReactComponent as Email} from "../../assets/images/icon/email.svg";
 import {ReactComponent as Password} from "../../assets/images/icon/key.svg";
 import {ReactComponent as Google} from '../../assets/images/icon/google-icon.svg'
 import Input from "../inputComponent/Input";
 import ButtonCustom from "../buttonComponent/ButtonCustom";
 
-const Login = () => {
+const SignUp = () => {
   return (
     <Box className={styles.loginWrapper}>
       <Box className={styles.loginInner}>
@@ -57,35 +56,31 @@ const Login = () => {
           <Box className={styles.loginRightInner}>
             <FormGroup>
               <Box className={styles.RightTitleWrapper}>
-                <Box mb={2}>
-                  <Stack direction={'row'} alignContent={'center'} justifyContent={'space-between'} spacing={2}>
-                    <Button className={`btn-text text-primary ${styles.topBtn}`} startIcon={<BackArrow/>} variant="text">Back</Button>
-                    <Button className={`btn-text ${styles.topBtn}`} startIcon={<Admin/>} variant="text">User</Button>
-                  </Stack>
-                </Box>
                 <Box>
                   <Box className={styles.titleWrapper}>
-                    <Typography variant="h2" component={'h2'} className={`title`} mb={2}>Login</Typography>
-                    <Typography variant="body" component={'p'} className={`text-grey`}>Don’t have an account? <strong><Link href="#"> Create a new account now. </Link> </strong>
-                      It’s FREE! Takes less than a minute.
+                    <Typography variant="h2" component={'h2'} className={`title theme-black-color`} mb={2}>Sign Up</Typography> 
+                    <Typography variant="body" component={'p'} className={`text-grey`}>Already have an account? <strong><Link href="#"> Login now. </Link> </strong>
                     </Typography>
                   </Box>
                   <Box mt={3.5}>
+                    <Box mb={2}>
+                      <Input type="text" labelName="Name" icon={<User />} />
+                    </Box>
                     <Box mb={2}>
                       <Input type="email" labelName="Email" icon={<Email />} />
                     </Box>
                     <Box mb={1}>
                       <Input type="password" labelName="Password" icon={<Password />} />
-                      <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
-                        <FormControlLabel control={<Checkbox />} label="Remember me" />
-                        <Link href="#">Forgot password?</Link>
+                      <Stack direction={'row'} flexWrap={'wrap'} alignItems={'center'} spacing={0}>
+                        <FormControlLabel control={<Checkbox />} label="I agree with" mr={1} />
+                        <strong><Link href="#"> Terms & Conditions</Link></strong>
                       </Stack>
                     </Box>
                     <Box mb={1.5}>
-                      <ButtonCustom variant="contained" value="Login" />
+                      <ButtonCustom variant="contained" value="Sign Up" />
                     </Box>
                     <Box>
-                      <ButtonCustom variant="Outlined" value="Login with Google" startIcon={<Google />} />
+                      <ButtonCustom variant="Outlined" value="Sign up with Google" startIcon={<Google />} />
                     </Box>
                   </Box>
                 </Box>
@@ -98,4 +93,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
