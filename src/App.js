@@ -1,9 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import Login from './component/login/Login';
 import ChooseLogin from './component/login/ChooseLogin';
 import UserLogin from './component/login/UserLogin';
 import SignUp from './component/login/SignUp';
+import PasswordReset from './component/login/PasswordReset';
+import CheckEmail from './component/login/CheckEmail';
+import CreatePassword from './component/login/CreatePassword';
 
 function App() {
   return (
@@ -11,7 +13,10 @@ function App() {
       {/* <UserLogin/> */}
       {/* <Login/> */}
       {/* <ChooseLogin /> */}
-      <SignUp/>
+      {/* <SignUp/> */}
+      {/* <PasswordReset /> */}
+      {/* <CheckEmail /> */}
+      <CreatePassword />
     </div>
   );
 }

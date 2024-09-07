@@ -10,7 +10,7 @@ import {ReactComponent as Google} from '../../assets/images/icon/google-icon.svg
 import Input from "../inputComponent/Input";
 import ButtonCustom from "../buttonComponent/ButtonCustom";
 
-const Login = () => {
+const CheckEmail = () => {
   return (
     <Box className={styles.loginWrapper}>
       <Box className={styles.loginInner}>
@@ -60,32 +60,25 @@ const Login = () => {
                 <Box mb={2}>
                   <Stack direction={'row'} alignContent={'center'} justifyContent={'space-between'} spacing={2}>
                     <Button className={`btn-text text-primary ${styles.topBtn}`} startIcon={<BackArrow/>} variant="text">Back</Button>
-                    <Button className={`btn-text ${styles.topBtn}`} startIcon={<Admin/>} variant="text">User</Button>
+                    
                   </Stack>
                 </Box>
                 <Box>
                   <Box className={styles.titleWrapper}>
-                    <Typography variant="h2" component={'h2'} className={`title theme-black-color`} mb={2}>Login</Typography>
-                    <Typography variant="body" component={'p'} className={`text-grey`}>Don’t have an account? <strong><Link href="#"> Create a new account now. </Link> </strong>
-                      It’s FREE! Takes less than a minute.
+                    <Typography variant="h2" component={'h2'} className={`title theme-black-color`} mb={2}>Check your email</Typography>
+                    <Typography variant="body" component={'p'} className={`text-grey`}>We have sent the code to <strong>levine90@gmail.com</strong>
                     </Typography>
                   </Box>
                   <Box mt={3.5}>
                     <Box mb={2}>
-                      <Input type="email" labelName="Email" icon={<Email />} />
+                      <Input type="text" labelName="Enter The Code" />
                     </Box>
+                    
                     <Box mb={1}>
-                      <Input type="password" labelName="Password" icon={<Password />} />
-                      <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
-                        <FormControlLabel control={<Checkbox />} label="Remember me" />
-                        <Link href="#">Forgot password?</Link>
-                      </Stack>
+                      <ButtonCustom variant="contained" value="Verify" />
                     </Box>
-                    <Box mb={1.5}>
-                      <ButtonCustom variant="contained" value="Login" />
-                    </Box>
-                    <Box>
-                      <ButtonCustom variant="Outlined" value="Login with Google" startIcon={<Google />} />
+                    <Box textAlign={'center'}>
+                        <strong><Link href="#">Send Again</Link></strong>
                     </Box>
                   </Box>
                 </Box>
@@ -98,4 +91,5 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default CheckEmail;
+

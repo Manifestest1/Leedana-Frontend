@@ -1,16 +1,13 @@
-import { Box, Button, Checkbox, FormControlLabel, FormGroup, Link, Stack, Typography } from "@mui/material";
+import { Box, Button, FormGroup, Stack, Typography } from "@mui/material";
 import React from "react";
 import styles from "./Login.module.scss";
 import Logo from "../../assets/images/logo.svg";
 import {ReactComponent as BackArrow} from "../../assets/images/icon/back-arrow.svg";
-import {ReactComponent as Admin} from "../../assets/images/icon/user-setting-icon.svg";
 import {ReactComponent as Email} from "../../assets/images/icon/email.svg";
-import {ReactComponent as Password} from "../../assets/images/icon/key.svg";
-import {ReactComponent as Google} from '../../assets/images/icon/google-icon.svg'
 import Input from "../inputComponent/Input";
 import ButtonCustom from "../buttonComponent/ButtonCustom";
 
-const Login = () => {
+const PasswordReset = () => {
   return (
     <Box className={styles.loginWrapper}>
       <Box className={styles.loginInner}>
@@ -60,32 +57,22 @@ const Login = () => {
                 <Box mb={2}>
                   <Stack direction={'row'} alignContent={'center'} justifyContent={'space-between'} spacing={2}>
                     <Button className={`btn-text text-primary ${styles.topBtn}`} startIcon={<BackArrow/>} variant="text">Back</Button>
-                    <Button className={`btn-text ${styles.topBtn}`} startIcon={<Admin/>} variant="text">User</Button>
+                    
                   </Stack>
                 </Box>
                 <Box>
                   <Box className={styles.titleWrapper}>
-                    <Typography variant="h2" component={'h2'} className={`title theme-black-color`} mb={2}>Login</Typography>
-                    <Typography variant="body" component={'p'} className={`text-grey`}>Don’t have an account? <strong><Link href="#"> Create a new account now. </Link> </strong>
-                      It’s FREE! Takes less than a minute.
+                    <Typography variant="h2" component={'h2'} className={`title theme-black-color`} mb={2}>Password Reset</Typography>
+                    <Typography variant="body" component={'p'} className={`text-grey`}>Enter the email address with your account and we’ll send an email with confirmation to reset your password.
                     </Typography>
                   </Box>
                   <Box mt={3.5}>
                     <Box mb={2}>
                       <Input type="email" labelName="Email" icon={<Email />} />
                     </Box>
-                    <Box mb={1}>
-                      <Input type="password" labelName="Password" icon={<Password />} />
-                      <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
-                        <FormControlLabel control={<Checkbox />} label="Remember me" />
-                        <Link href="#">Forgot password?</Link>
-                      </Stack>
-                    </Box>
-                    <Box mb={1.5}>
-                      <ButtonCustom variant="contained" value="Login" />
-                    </Box>
+                    
                     <Box>
-                      <ButtonCustom variant="Outlined" value="Login with Google" startIcon={<Google />} />
+                      <ButtonCustom variant="contained" value="Send Code" />
                     </Box>
                   </Box>
                 </Box>
@@ -98,4 +85,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default PasswordReset;
