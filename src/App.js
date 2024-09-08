@@ -6,6 +6,8 @@ import SignUp from './component/login/SignUp';
 import PasswordReset from './component/login/PasswordReset';
 import CheckEmail from './component/login/CheckEmail';
 import CreatePassword from './component/login/CreatePassword';
+import StepForm from './component/stepper/StepForm';
+import PlanSetup from './pages/planSetup/PlanSetup';
 
 function App() {
   return (
@@ -16,7 +18,8 @@ function App() {
       {/* <SignUp/> */}
       {/* <PasswordReset /> */}
       {/* <CheckEmail /> */}
-      <CreatePassword />
+      {/* <CreatePassword /> */}
+      <PlanSetup/>
     </div>
   );
 }

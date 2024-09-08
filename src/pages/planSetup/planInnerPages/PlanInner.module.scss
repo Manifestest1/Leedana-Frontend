@@ -1,0 +1,31 @@
+.stepContentWrapper {
+    .titleWrapper {
+        max-width: 480px;
+        text-align: center;
+        margin: auto auto 50px auto;
+        p {
+            font-size: 16px;
+        }
+    }
+}
+.setupWrapper {
+    
+    .setupCard {
+        .setupIconWrapper{
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+            background-color: var(--primary-color10);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .cardTitle {
+            h6 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
