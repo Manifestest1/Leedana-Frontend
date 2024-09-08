@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 // Login and Register pages
 const ChooseLogin = React.lazy(() => import('./views/pages/login/ChooseLogin'));
 const Login = React.lazy(() => import('./views/pages/login/Login'));
@@ -11,9 +12,13 @@ const CheckEmail = React.lazy(() => import('./views/pages/forgetPassword/CheckEm
 const CreatePassword = React.lazy(() => import('./views/pages/forgetPassword/CreatePassword'));
 const PasswordReset = React.lazy(() => import('./views/pages/forgetPassword/PasswordReset'));
 
+// Wellcome pages
+const StepForm = React.lazy(() => import('./component/stepper/StepForm'));
+
+
 const routes = [
     // Login and Register path
-    { path: '/', name: 'ChooseLogin', element: <ChooseLogin/> },
+    // { path: '/', name: 'ChooseLogin', element: <ChooseLogin/> },
     { path: '/login', name: 'Login', element: <Login/> },
     { path: '/admin-login', name: 'AdminLogin', element: <AdminLogin/> },
     { path: '/register', name: 'Register', element: <Register/> },
@@ -22,6 +27,8 @@ const routes = [
     { path: '/check-email', name: 'CheckEmail', element: <CheckEmail /> },
     { path: '/create-password', name: 'CreatePassword', element: <CreatePassword /> },
     { path: '/password-reset', name: 'PasswordReset', element: <PasswordReset/> },
+    { path: '/', name: 'StepForm', element: <StepForm /> },
+
 ];
 
 export default routes;
