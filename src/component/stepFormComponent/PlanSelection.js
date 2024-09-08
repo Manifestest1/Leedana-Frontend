@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import styles from './PlanInner.module.scss';
-import PrimiumCrad from '../../../component/card/PrimiumCrad';
+// import PrimiumCrad from '../../../component/card/PrimiumCrad'; 
 
 const PlanSelection = () => {
   return (
@@ -14,7 +14,7 @@ const PlanSelection = () => {
             <Grid container spacing={4.5}>
                 <Grid item md={4}>
                     <Box>
-                        <PrimiumCrad />
+                        {/* <PrimiumCrad /> */}
                     </Box>
                 </Grid>
             </Grid>

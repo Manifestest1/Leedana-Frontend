@@ -15,10 +15,6 @@ const StepForm = ({steps, getStepContent}) => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-
-
-
-
   return (
     <Box className={styles.stepFormWrapper}>
       <Box className={styles.stepFormHeader}>
