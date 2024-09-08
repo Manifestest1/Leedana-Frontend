@@ -1,0 +1,151 @@
+@import "@fontsource/manrope";
+
+
+:root {
+  --primary-color:#558B2F;
+  --primary-color10: #558b2f1a;
+  --primary-color30: #558b2f4d;
+  --primary-gradient: radial-gradient(circle, rgba(85,139,47,1) 0%, rgba(23,37,13,1) 100%);
+  --white-color: #ffffff;
+  --light-black-color: #57644B;
+  --white-light-color: #F8F9F8;
+  --white-extra-light-color: #F8FEF4;
+  --grey-color: #75846B;
+  --border-color: rgba(85, 139, 47, 0.5);
+}
+
+body {
+  font-family: "Manrope";
+  background-color: var(--white-color);
+  line-height: 1.5;
+}
+body a,
+body a.MuiTypography-root {
+  color: var(--primary-color);
+  text-decoration-color: var(--border-color);
+  position: relative;
+}
+
+body .text-grey {
+  color: var(--grey-color);
+}
+body h1.title {
+  font-size: 46px;
+  line-height: 1.5;
+  font-weight: 700;
+  font-family: "Manrope";
+}
+body h2.title {
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: 700;
+  font-family: "Manrope";
+}
+
+body h3.title {
+  font-size: 30px;
+  line-height: 1.5;
+  font-family: "Manrope";
+}
+body h4.title {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+  font-family: "Manrope";
+}
+body h5.title {
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: "Manrope";
+}
+body h6.title {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Manrope";
+}
+body .fw-400 {
+  font-weight: 400 !important;
+}
+body .fw-500 {
+  font-weight: 500 !important;
+}
+body .fw-600 {
+  font-weight: 600 !important;
+}
+body .fw-700 {
+  font-weight: 700 !important;
+}
+body .fw-800 {
+  font-weight: 800 !important;
+}
+.text-white {
+  color: var(--white-color);
+}
+.theme-black-color {
+  color: var(--light-black-color);
+}
+.text-primary {
+  color: var(--primary-color);
+}
+button.btn-text {
+  background-color: transparent;
+  color: var(--light-black-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 0;
+  text-transform: capitalize;
+}
+button.btn-text .MuiButton-startIcon svg {
+  width: 20px;
+  height: auto;
+  max-height: 20px;
+}
+button.btn-text:hover,
+button.btn-text.text-primary {
+  color: var(--primary-color);
+}
+.MuiFormControlLabel-root .MuiCheckbox-root {
+  padding-right: 5px;
+}
+.MuiFormControlLabel-root .MuiCheckbox-root {
+  color: var(--primary-color);
+}
+.MuiFormControlLabel-root .MuiCheckbox-root.Mui-checked {
+  color: var(--primary-color);
+}
+.MuiFormControlLabel-root .MuiCheckbox-root ~ .MuiTypography-root {
+  color: var(--grey-color);
+}
+.success-list-wrapper .list-success {
+  padding: 0;
+}
+.success-list-wrapper .list-success .MuiListItem-root {
+  padding: 0px 0px 0px 20px;
+  position: relative;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+.success-list-wrapper .list-success .MuiListItem-root::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 15px;
+  height: 15px;
+  background: url("./assets/images/icon/success-icon.svg");
+}
+.list-style-list .MuiList-root {
+  margin: 0;
+  padding: 0 0 0 15px;
+  list-style-type: disc;
+  
+}
+.list-style-list .MuiList-root .MuiListItem-root {
+  display: list-item;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+}

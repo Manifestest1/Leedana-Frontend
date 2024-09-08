@@ -1,0 +1,30 @@
+image: atlassian/default-image:3
+
+pipelines:
+  branches:
+    dev:
+      - step:
+          script:
+            - apt-get update && apt-get install -y unzip zip
+            - zip -r Leedana-dev-app.zip .
+            - pipe: atlassian/aws-code-deploy:1.1.1
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID 
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY 
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION 
+                APPLICATION_NAME: 'Leedana-App'
+                ZIP_FILE: 'Leedana-dev-app.zip'
+                COMMAND: 'upload' 
+                S3_BUCKET: $S3_BUCKET
+            - pipe: atlassian/aws-code-deploy:1.1.1
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID 
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY 
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION 
+                APPLICATION_NAME: 'Leedana-App'
+                DEPLOYMENT_GROUP: 'Leedana-Dev-App-Deployment-Group'
+                WAIT: 'true'
+                S3_BUCKET: $S3_BUCKET
+                COMMAND: 'deploy' 
+                IGNORE_APPLICATION_STOP_FAILURES: 'false'
+                FILE_EXISTS_BEHAVIOR: 'OVERWRITE'
