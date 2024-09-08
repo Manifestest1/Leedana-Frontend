@@ -11,6 +11,10 @@ const CheckEmail = React.lazy(() => import('./views/pages/forgetPassword/CheckEm
 const CreatePassword = React.lazy(() => import('./views/pages/forgetPassword/CreatePassword'));
 const PasswordReset = React.lazy(() => import('./views/pages/forgetPassword/PasswordReset'));
 
+const SetupWelcome = React.lazy(() => import('./views/pages/stepForm/SetupWelcome'));
+
+
+
 const routes = [
     // Login and Register path
     { path: '/', name: 'ChooseLogin', element: <ChooseLogin/> },
@@ -22,6 +26,9 @@ const routes = [
     { path: '/check-email', name: 'CheckEmail', element: <CheckEmail /> },
     { path: '/create-password', name: 'CreatePassword', element: <CreatePassword /> },
     { path: '/password-reset', name: 'PasswordReset', element: <PasswordReset/> },
+
+    { path: '/welcome', name: 'SetupWelcome', element: <SetupWelcome/> },
+
 ];
 
 export default routes;
