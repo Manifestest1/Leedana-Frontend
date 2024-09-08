@@ -1,26 +1,25 @@
+import React, { Suspense } from 'react';
 import './App.css';
-import Login from './component/login/Login';
-import ChooseLogin from './component/login/ChooseLogin';
-import UserLogin from './component/login/UserLogin';
-import SignUp from './component/login/SignUp';
-import PasswordReset from './component/login/PasswordReset';
-import CheckEmail from './component/login/CheckEmail';
-import CreatePassword from './component/login/CreatePassword';
-import StepForm from './component/stepper/StepForm';
-import PlanSetup from './pages/planSetup/PlanSetup';
+import routes from './routes'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      {/* <UserLogin/> */}
-      {/* <Login/> */}
-      {/* <ChooseLogin /> */}
-      {/* <SignUp/> */}
-      {/* <PasswordReset /> */}
-      {/* <CheckEmail /> */}
-      {/* <CreatePassword /> */}
-      <PlanSetup/>
-    </div>
+  
+      <div className="App">
+        <Suspense fallback={<div>Loading...</div>}> {/* Optional: Show loading while components are loading */}
+          <Routes>
+            {routes.map((route, index) => (
+              <Route
+                key={index}
+                path={route.path}
+                element={route.element}
+              />
+            ))}
+          </Routes>
+        </Suspense>
+      </div>
+    
   );
 }
 

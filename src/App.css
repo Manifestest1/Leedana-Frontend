@@ -19,6 +19,7 @@ body {
   background-color: var(--white-color);
   line-height: 1.5;
 }
+body a,
 body a.MuiTypography-root {
   color: var(--primary-color);
   text-decoration-color: var(--border-color);
@@ -140,6 +141,7 @@ button.btn-text.text-primary {
   margin: 0;
   padding: 0 0 0 15px;
   list-style-type: disc;
+  
 }
 .list-style-list .MuiList-root .MuiListItem-root {
   display: list-item;
