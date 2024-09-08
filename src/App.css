@@ -18,10 +18,8 @@ body {
 }
 body a.MuiTypography-root {
   color: var(--primary-color);
-  text-decoration-color: var(--border-color);
-  position: relative;
+  text-decoration: none;
 }
-
 body .text-grey {
   color: var(--grey-color);
 }
@@ -67,7 +65,6 @@ button.btn-text {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
-  padding: 0;
   text-transform: capitalize;
 }
 button.btn-text .MuiButton-startIcon svg {
@@ -91,25 +88,3 @@ button.btn-text.text-primary {
 .MuiFormControlLabel-root .MuiCheckbox-root ~ .MuiTypography-root {
   color: var(--grey-color);
 }
-.success-list-wrapper .list-success {
-  padding: 0;
-}
-.success-list-wrapper .list-success .MuiListItem-root {
-  padding: 0px 0px 0px 20px;
-  position: relative;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 5px;
-}
-.success-list-wrapper .list-success .MuiListItem-root::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 0px;
-  width: 15px;
-  height: 15px;
-  background: url("./assets/images/icon/success-icon.svg");
-}
-
-
