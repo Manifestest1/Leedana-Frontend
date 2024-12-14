@@ -1,0 +1,33 @@
+.premiumCardWrapper {
+    .premiumCard {
+        width: 100%;
+        background-color: var(--white-color);
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        transition: all 0.4s ease-in-out;
+        &.active {
+            border-color: var(--primary-color);
+            background-color: var(--primary-color10);
+        }
+        [class*="MuiCardContent-root"] {
+            padding: 28px 30px;
+            .cardTitle {
+                font-weight: 700;
+                span {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: var(--light-black-color);
+                }
+            }
+            [class*="list-style-list"] {
+                ul {
+                    li {
+                        &::marker {
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
